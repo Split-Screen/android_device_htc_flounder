@@ -4,11 +4,11 @@
 TARGET_SCREEN_HEIGHT := 2048
 TARGET_SCREEN_WIDTH := 1536
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+# Inherit some common PAC stuff.
+$(call inherit-product, vendor/pac/config/common_full_tablet_wifionly.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/pac/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder.mk)
@@ -23,7 +23,7 @@ KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/htc/flounder
 TARGET_KERNEL_CONFIG := flounder_defconfig
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_CMDLINE := androidboot.selinux=enforcing
+BOARD_KERNEL_PACDLINE := androidboot.selinux=enforcing
 TARGET_PREBUILT_KERNEL := false
 
 # Extra Packages
@@ -40,6 +40,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_ID=MMB29K
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := cm_flounder
+PRODUCT_NAME := pac_flounder
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 9
