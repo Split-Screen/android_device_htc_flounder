@@ -1,8 +1,7 @@
 # CyanogenMod Specific Changes
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2048
-TARGET_SCREEN_WIDTH := 1536
+PAC_BOOTANIMATION_NAME := 1536
 
 # Inherit some common PAC stuff.
 $(call inherit-product, vendor/pac/config/common_full_tablet_wifionly.mk)
