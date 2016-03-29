@@ -1,7 +1,11 @@
-# CyanogenMod Specific Changes
+# PAC Specific Changes
 
 # Boot animation
 PAC_BOOTANIMATION_NAME := 1536
+
+# Camera
+PRODUCT_PACKAGES += \
+    Snap
 
 # Inherit some common PAC stuff.
 $(call inherit-product, vendor/pac/config/common_full_tablet_wifionly.mk)
